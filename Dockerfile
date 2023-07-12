@@ -13,8 +13,6 @@ RUN npm install --global http-server
 
 RUN ng build
 
-COPY ./dist /usr/src/app
-
 EXPOSE 4200
 
 CMD [ "http-server", "./dist/cs6261project4/", "-p", "4200" ]

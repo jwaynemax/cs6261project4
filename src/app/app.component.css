@@ -1,0 +1,9 @@
+.resistance-calc {
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.digits-selection > p {
+  text-align: center;
+}

@@ -13,7 +13,7 @@ RUN npm install --global http-server
 
 RUN ng build
 
-COPY ./dist/ ./
+COPY ./dist /usr/src/app
 
 EXPOSE 4200
 

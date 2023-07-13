@@ -9,8 +9,7 @@
   <div class="bands-form">
     <form action="/">
       <div class="digits-selection">
-        <p><label for="digits">Digits</label></p>
-
+        <label for="digits">Digits: </label>
         <select name="band1" id="band1">
           <option value="Black">Black</option>
           <option value="Brown">Brown</option>
@@ -49,9 +48,41 @@
           <option value="Gray">Gray</option>
           <option value="White">White</option>
         </select>
-
       </div>
 
+      <div class="multiplier">
+        <label for="multiplier">Multiplier: </label>
+        <select class="multiplier">
+          <option class="black" value="x1">x1 Black</option>
+          <option class="brown" value="x10">x10 Brown</option>
+          <option class="red" value="x100">x100 Red</option>
+          <option class="orange" value="x1k">x1k Orange</option>
+          <option class="yellow" value="x10k">x10k Yellow</option>
+          <option class="green" value="x100k">x100k Green</option>
+          <option class="blue" value="x1M">x1M Blue</option>
+          <option class="purple" value="x10M">x10M Violet</option>
+          <option class="grey" value="x100M">x100M Gray</option>
+          <option class="white" value="x1G">x1G White</option>
+          <option class="gold" value="÷10">÷10 Gold</option>
+          <option class="silver" value="÷100" selected="">÷100 Silver</option>
+        </select>
+      </div>
+
+      <div class="tolerance">
+        <label for="tolerance">Tolerance: </label>
+        <select class="tolerance">
+          <option class="brown" value="± 1%">± 1% Brown</option>
+          <option class="red" value="± 2%">± 2% Red</option>
+          <option class="orange" value="± 3%">± 3% Orange</option>
+          <option class="yellow" value="± 4%">± 4% Yellow</option>
+          <option class="green" value="± 0.5%">± 0.5% Green</option>
+          <option class="blue" value="± 0.25%">± 0.25% Blue</option>
+          <option class="purple" value="± 0.10%">± 0.10% Violet</option>
+          <option class="grey" value="± 0.05%">± 0.05% Gray</option>
+          <option class="gold" value="± 5%">± 5% Gold</option>
+          <option class="silver" value="± 10%" selected="">± 10% Silver</option>
+        </select>
+      </div>
 
       <br><br>
       <input type="submit" value="Submit">

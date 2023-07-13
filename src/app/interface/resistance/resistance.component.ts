@@ -25,8 +25,7 @@ export class ResistanceComponent implements OnInit {
 
   formSubmission(): void {
     let digits = this.band1 + this.band2 + this.band3;
-
-    this.calculation = this.calculatorService.calculateResistor(digits);
+    this.calculation = this.calculatorService.calculateResistor(digits, this.multiplier, this.tolerance);
   }
 
 }

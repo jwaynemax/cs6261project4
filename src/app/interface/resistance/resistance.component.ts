@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from '../../services/calculator.service';
+
 
 @Component({
   selector: 'app-resistance',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResistanceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private calculatorService: CalculatorService) { }
 
   ngOnInit(): void {
+  }
+
+  formSubmission() {
+    
   }
 
 }

@@ -5,16 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class CalculatorService {
 
-  private band1: string = "test";
-  private band2: string = "test";
-  private band3: string = "test";
+  private digits: string;
   private multiplier: number;
   private tolerance: string;
 
-  constructor() { }
+  constructor() {}
 
-  calculateResistor(): string {
-    let digits = this.band1 + this.band2 + this.band3;
-    return digits;
+  calculateResistor(digits: string): string {
+    this.digits = digits;
+    return this.digits;
   }
 }

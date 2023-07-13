@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../../services/calculator.service';
+import { FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -9,13 +11,22 @@ import { CalculatorService } from '../../services/calculator.service';
 })
 export class ResistanceComponent implements OnInit {
 
+  public band1: string;
+  public band2: string;
+  public band3: string;
+  public multiplier: string;
+  public tolerance: string;
+  public calculation: string;
+
   constructor(private calculatorService: CalculatorService) { }
 
   ngOnInit(): void {
   }
 
-  formSubmission() {
-    
+  formSubmission(): void {
+    let digits = this.band1 + this.band2 + this.band3;
+
+    this.calculation = this.calculatorService.calculateResistor(digits);
   }
 
 }

@@ -1,12 +1,12 @@
 <div class="resistance-calc">
-  <h2>Resistance:</h2>
+  <h2>Resistance: {{calculation}}</h2>
   <p>Select bands</p>
 
   <div class="bands-form">
-    <form action="/">
+    <form (ngSubmit)="formSubmission()">
       <div class="digits-selection">
         <label for="digits">Digits: </label>
-        <select name="band1" id="band1">
+        <select name="band1" id="band1" [(ngModel)]="band1">
           <option value="1">Brown</option>
           <option value="2">Red</option>
           <option value="3">Orange</option>
@@ -18,7 +18,7 @@
           <option value="9">White</option>
         </select>
 
-        <select name="band2" id="band2">
+        <select name="band2" id="band2" [(ngModel)]="band2">
           <option value="0">Black</option>
           <option value="1">Brown</option>
           <option value="2">Red</option>
@@ -31,7 +31,7 @@
           <option value="9">White</option>
         </select>
 
-        <select name="band3" id="band3">
+        <select name="band3" id="band3" [(ngModel)]="band3">
           <option value="0">Black</option>
           <option value="1">Brown</option>
           <option value="2">Red</option>
@@ -47,7 +47,7 @@
 
       <div class="multiplier">
         <label for="multiplier">Multiplier: </label>
-        <select class="multiplier">
+        <select class="multiplier" [(ngModel)]="multiplier">
           <option value="x1">x1 Black</option>
           <option value="x10">x10 Brown</option>
           <option value="x100">x100 Red</option>
@@ -65,7 +65,7 @@
 
       <div class="tolerance">
         <label for="tolerance">Tolerance: </label>
-        <select class="tolerance">
+        <select class="tolerance" [(ngModel)]="tolerance">
           <option class="brown" value="± 1%">± 1% Brown</option>
           <option class="red" value="± 2%">± 2% Red</option>
           <option class="orange" value="± 3%">± 3% Orange</option>

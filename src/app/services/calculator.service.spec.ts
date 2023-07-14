@@ -1,4 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
 
 import { CalculatorService } from './calculator.service';
 

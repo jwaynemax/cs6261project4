@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../../services/calculator.service';
-import { FormControl } from '@angular/forms';
-
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-resistance',

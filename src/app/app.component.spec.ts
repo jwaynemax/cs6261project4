@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+import { ResistanceComponent } from './interface/resistance/resistance.component';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -11,7 +13,8 @@ describe('AppComponent', () => {
         FormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ResistanceComponent
       ],
     }).compileComponents();
   }));

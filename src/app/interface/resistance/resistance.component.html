@@ -6,7 +6,7 @@
     <form (ngSubmit)="formSubmission()">
       <div class="digits-selection">
         <label for="digits">Digits: </label>
-        <select name="band1" id="band1" [(ngModel)]="band1">
+        <select name="band1" id="band1" [(ngModel)]="band1" required>
           <option value="1">Brown</option>
           <option value="2">Red</option>
           <option value="3">Orange</option>

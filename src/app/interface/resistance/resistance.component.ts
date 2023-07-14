@@ -9,11 +9,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class ResistanceComponent implements OnInit {
 
-  public band1: string;
-  public band2: string;
-  public band3: string;
-  public multiplier: string;
-  public tolerance: string;
+  public band1: string = "1";
+  public band2: string = "0";
+  public band3: string = "0";
+  public multiplier: string = "x1";
+  public tolerance: string = "1%";
   public calculation: string;
 
   constructor(private calculatorService: CalculatorService) { }

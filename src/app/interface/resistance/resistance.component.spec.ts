@@ -46,4 +46,9 @@ describe('ResistanceComponent', () => {
   it('should verify tolerance is initialized to 1%', () => {
     expect(component.tolerance).toEqual("1%");
   });
+
+  it('should call formSubmission and capture the resistor calculation', () => {
+    component.formSubmission();
+    expect(component.calculation).toEqual("100 +/- 1%");
+  });
 });

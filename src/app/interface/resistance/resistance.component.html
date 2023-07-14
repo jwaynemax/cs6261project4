@@ -2,85 +2,91 @@
   <h2>Resistance: {{calculation}}</h2>
   <p>Select bands</p>
 
-  <div class="bands-form">
-    <form (ngSubmit)="formSubmission()">
-      <div class="digits-selection">
-        <label for="digits">Digits: </label>
-        <select name="band1" id="band1" [(ngModel)]="band1" required>
-          <option value="1">Brown</option>
-          <option value="2">Red</option>
-          <option value="3">Orange</option>
-          <option value="4">Yellow</option>
-          <option value="5">Green</option>
-          <option value="6">Blue</option>
-          <option value="7">Violet</option>
-          <option value="8">Gray</option>
-          <option value="9">White</option>
-        </select>
+  <table>
+    <div class="bands-form">
+      <form (ngSubmit)="formSubmission()">
+        <tr>
+          <th><label for="digits">Digits: </label></th>
+          <th><label for="multiplier">Multiplier: </label></th>
+          <th><label for="tolerance">Tolerance: </label></th>
+        </tr>
+        <tr>
+          <td>
+            <select name="band1" id="band1" [(ngModel)]="band1" required>
+              <option value="1">Brown</option>
+              <option value="2">Red</option>
+              <option value="3">Orange</option>
+              <option value="4">Yellow</option>
+              <option value="5">Green</option>
+              <option value="6">Blue</option>
+              <option value="7">Violet</option>
+              <option value="8">Gray</option>
+              <option value="9">White</option>
+            </select>
 
-        <select name="band2" id="band2" [(ngModel)]="band2">
-          <option value="0">Black</option>
-          <option value="1">Brown</option>
-          <option value="2">Red</option>
-          <option value="3">Orange</option>
-          <option value="4">Yellow</option>
-          <option value="5">Green</option>
-          <option value="6">Blue</option>
-          <option value="7">Violet</option>
-          <option value="8">Gray</option>
-          <option value="9">White</option>
-        </select>
+            <select name="band2" id="band2" [(ngModel)]="band2">
+              <option value="0">Black</option>
+              <option value="1">Brown</option>
+              <option value="2">Red</option>
+              <option value="3">Orange</option>
+              <option value="4">Yellow</option>
+              <option value="5">Green</option>
+              <option value="6">Blue</option>
+              <option value="7">Violet</option>
+              <option value="8">Gray</option>
+              <option value="9">White</option>
+            </select>
 
-        <select name="band3" id="band3" [(ngModel)]="band3">
-          <option value="0">Black</option>
-          <option value="1">Brown</option>
-          <option value="2">Red</option>
-          <option value="3">Orange</option>
-          <option value="4">Yellow</option>
-          <option value="5">Green</option>
-          <option value="6">Blue</option>
-          <option value="7">Violet</option>
-          <option value="8">Gray</option>
-          <option value="9">White</option>
-        </select>
-      </div>
+            <select name="band3" id="band3" [(ngModel)]="band3">
+              <option value="0">Black</option>
+              <option value="1">Brown</option>
+              <option value="2">Red</option>
+              <option value="3">Orange</option>
+              <option value="4">Yellow</option>
+              <option value="5">Green</option>
+              <option value="6">Blue</option>
+              <option value="7">Violet</option>
+              <option value="8">Gray</option>
+              <option value="9">White</option>
+            </select>
+          </td>
 
-      <div class="multiplier">
-        <label for="multiplier">Multiplier: </label>
-        <select name="multiplier" id="multiplier" [(ngModel)]="multiplier">
-          <option value="x1">x1 Black</option>
-          <option value="x10">x10 Brown</option>
-          <option value="x100">x100 Red</option>
-          <option value="x1k">x1k Orange</option>
-          <option value="x10k">x10k Yellow</option>
-          <option value="x100k">x100k Green</option>
-          <option value="x1M">x1M Blue</option>
-          <option value="x10M">x10M Violet</option>
-          <option value="x100M">x100M Gray</option>
-          <option value="x1G">x1G White</option>
-          <option value="/10">÷10 Gold</option>
-          <option value="/100">÷100 Silver</option>
-        </select>
-      </div>
+          <td>
+            <select name="multiplier" id="multiplier" [(ngModel)]="multiplier">
+              <option value="x1">x1 Black</option>
+              <option value="x10">x10 Brown</option>
+              <option value="x100">x100 Red</option>
+              <option value="x1k">x1k Orange</option>
+              <option value="x10k">x10k Yellow</option>
+              <option value="x100k">x100k Green</option>
+              <option value="x1M">x1M Blue</option>
+              <option value="x10M">x10M Violet</option>
+              <option value="x100M">x100M Gray</option>
+              <option value="x1G">x1G White</option>
+              <option value="/10">÷10 Gold</option>
+              <option value="/100">÷100 Silver</option>
+            </select>
+          </td>
 
-      <div class="tolerance">
-        <label for="tolerance">Tolerance: </label>
-        <select name="tolerance" [(ngModel)]="tolerance">
-          <option value="1%">1% Brown</option>
-          <option value="2%">2% Red</option>
-          <option value="3%">3% Orange</option>
-          <option value="4%">4% Yellow</option>
-          <option value="0.5%">0.5% Green</option>
-          <option value="0.25%">0.25% Blue</option>
-          <option value="0.10%">0.10% Violet</option>
-          <option value="0.05%">0.05% Gray</option>
-          <option value="5%">±5% Gold</option>
-          <option value="10%">10% Silver</option>
-        </select>
-      </div>
+          <td>
+            <select name="tolerance" [(ngModel)]="tolerance">
+              <option value="1%">1% Brown</option>
+              <option value="2%">2% Red</option>
+              <option value="3%">3% Orange</option>
+              <option value="4%">4% Yellow</option>
+              <option value="0.5%">0.5% Green</option>
+              <option value="0.25%">0.25% Blue</option>
+              <option value="0.10%">0.10% Violet</option>
+              <option value="0.05%">0.05% Gray</option>
+              <option value="5%">5% Gold</option>
+              <option value="10%">10% Silver</option>
+            </select>
+          </td>
+        </tr>
 
-      <br><br>
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </table>
 </div>

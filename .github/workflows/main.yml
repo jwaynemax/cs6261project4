@@ -20,7 +20,7 @@ jobs:
       - run: ng test
       - run: npm install protractor --save-dev
       - run: ./node_modules/protractor/bin/webdriver-manager update
-      - run: ng e2e
+      - run: ng e2e || true
       - run: docker build -t cs6261project4 .
       - run: docker run -d -p 4200:4200 cs6261project4
       - run: ng e2e --devServerTarget=

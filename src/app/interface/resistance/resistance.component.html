@@ -1,14 +1,14 @@
 <div class="resistance-calc">
-  <h2>Resistance: {{calculation}}</h2>
-  <p>Select bands</p>
+  <h2 id="calculation">Resistance: {{calculation}}</h2>
+  <p id="select-bands">Select bands</p>
 
   <table>
     <div class="bands-form">
       <form (ngSubmit)="formSubmission()">
         <tr>
-          <th><label for="digits">Digits: </label></th>
-          <th><label for="multiplier">Multiplier: </label></th>
-          <th><label for="tolerance">Tolerance: </label></th>
+          <th><label id="digits-header" for="digits">Digits: </label></th>
+          <th><label id="multiplier-header" for="multiplier">Multiplier: </label></th>
+          <th><label id="tolerance-header" for="tolerance">Tolerance: </label></th>
         </tr>
         <tr>
           <td>
